@@ -19,12 +19,15 @@ let conteudo = document.getElementById('conteudo')
 // Função abri modal
 function abriModal () {
     modal.style.display = 'block'
-    window.location.reload();
 }
 
 // Função fecha modal 
 function closeModal () {
     modal.style.display ='none'
+}
+
+function recarregarPagina(){
+    window.location.reload();
 }
 
 // Evento de click quando tiver um click fora da janela do modal
@@ -179,5 +182,6 @@ const saveTarefa = async (tarefa) => {
     }
     closeModal()
     getTarefas()
+    recarregarPagina()
 }
 
