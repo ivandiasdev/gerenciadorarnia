@@ -182,6 +182,9 @@ const saveTarefa = async (tarefa) => {
     }
     closeModal()
     getTarefas()
-    recarregarPagina()
+    setTimeout (() => {
+        recarregarPagina()
+    }, 1000)
+}
 }
 
