@@ -19,6 +19,7 @@ let conteudo = document.getElementById('conteudo')
 // Função abri modal
 function abriModal () {
     modal.style.display = 'block'
+    window.location.reload(true);
 }
 
 // Função fecha modal 
@@ -78,7 +79,6 @@ const getTarefas = async () =>{
     </td>
     </tr>`
     })
-    window.location.reload(true);
 }
 
 let adicionarTarefas = async (tarefa) =>{
