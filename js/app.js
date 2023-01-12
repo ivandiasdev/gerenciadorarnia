@@ -26,10 +26,6 @@ function closeModal () {
     modal.style.display ='none'
 }
 
-function recarregarPagina(){
-    window.location.reload();
-}
-
 // Evento de click quando tiver um click fora da janela do modal
 buttonOpenModal.onclick = () => {
     document.getElementById("mNumero").value = ''
@@ -175,18 +171,15 @@ function confirmacao(id) {
 const saveTarefa = async (tarefa) => {
     if (percorrerTarefa === null){
         await adicionarTarefas(tarefa)
-        recarregarPagina()
     } else{
         await obterTarefa(percorrerTarefa.id, tarefa)
         percorrerTarefa = null
 
     }
+    window.location.reload();
     closeModal()
     getTarefas()
-   /* setTimeout (() => {
-        recarregarPagina()
-    }, 1000)*/
 }
-window.location.reload();
+
 }
 
