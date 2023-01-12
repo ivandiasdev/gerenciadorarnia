@@ -49,9 +49,8 @@ window.addEventListener('click', (event) =>{
 })
 
 const getTarefas = async () =>{
-    let bancoDeDados = await fetch ('https://gerenciador.herokuapp.com/tarefas')
+    let bancoDeDados = await fetch ('https://api-projeto-production.up.railway.app/tarefas')
     let tarefas = await bancoDeDados.json() 
-    content.innerHTML = ''
     const content = document.getElementById("conteudo")
     tarefas.forEach((tarefas) => {
         let classeCor = ''
@@ -81,7 +80,7 @@ const getTarefas = async () =>{
 }
 
 let adicionarTarefas = async (tarefa) =>{
-    await fetch("https://gerenciador.herokuapp.com/tarefas",{
+    await fetch("https://api-projeto-production.up.railway.app/tarefas",{
         method:"POST",
         headers:{
             'Accept':'application/json, text/plain, */*',
@@ -101,14 +100,14 @@ function verificarFormulario(){
 }
 
 const getTarefaUnica = async(id) =>{
-    let bancoDeDados = await fetch(`https://gerenciador.herokuapp.com/tarefas/${id}`)
+    let bancoDeDados = await fetch(`https://api-projeto-production.up.railway.app/tarefas/${id}`)
     let tarefas = await bancoDeDados.json() 
     return tarefas
 } 
 
 let obterTarefa = async (id, tarefa) =>{
     console.log('PUT')
-    await fetch(`https://gerenciador.herokuapp.com/tarefas/${id}`,{
+    await fetch(`https://api-projeto-production.up.railway.app/tarefas/${id}`,{
         method:"PUT",
         headers:{
             'Accept':'application/json, text/plain, */*',
@@ -156,9 +155,10 @@ function alterarData(data){
 
 //função para deletar a tarefa cadastrada no banco de dados
 const deletarTarefa = async (id) =>{
-    await fetch(`https://gerenciador.herokuapp.com/tarefas/${id}`,{
+    await fetch(`https://api-projeto-production.up.railway.app/tarefas/${id}`,{
         method:"DELETE",
     })
+    window.location.reload();
     getTarefas()
 }
 
@@ -177,9 +177,7 @@ const saveTarefa = async (tarefa) => {
 
     }
     window.location.reload();
-    closeModal()
     getTarefas()
 }
-
 }
 
