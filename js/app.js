@@ -78,6 +78,7 @@ const getTarefas = async () =>{
     </td>
     </tr>`
     })
+    window.location.reload(true);
 }
 
 let adicionarTarefas = async (tarefa) =>{
@@ -89,7 +90,6 @@ let adicionarTarefas = async (tarefa) =>{
         },
         body: JSON.stringify(tarefa)
     });
-    window.location.reload();
 }
 
 
