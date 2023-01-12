@@ -187,5 +187,6 @@ const saveTarefa = async (tarefa) => {
         recarregarPagina()
     }, 1000)*/
 }
+recarregarPagina()
 }
 
