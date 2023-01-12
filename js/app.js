@@ -179,5 +179,5 @@ const saveTarefa = async (tarefa) => {
     window.location.reload();
     getTarefas()
 }
-}
+
 
