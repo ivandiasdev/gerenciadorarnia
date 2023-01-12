@@ -175,6 +175,7 @@ function confirmacao(id) {
 const saveTarefa = async (tarefa) => {
     if (percorrerTarefa === null){
         await adicionarTarefas(tarefa)
+        recarregarPagina()
     } else{
         await obterTarefa(percorrerTarefa.id, tarefa)
         percorrerTarefa = null
@@ -182,9 +183,9 @@ const saveTarefa = async (tarefa) => {
     }
     closeModal()
     getTarefas()
-    setTimeout (() => {
+   /* setTimeout (() => {
         recarregarPagina()
-    }, 1000)
+    }, 1000)*/
 }
 }
 
