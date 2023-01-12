@@ -169,6 +169,7 @@ function confirmacao(id) {
 
 // função para salvar as tarefas no banco de dados
 const saveTarefa = async (tarefa) => {
+    window.location.reload();
     if (percorrerTarefa === null){
         await adicionarTarefas(tarefa)
     } else{
