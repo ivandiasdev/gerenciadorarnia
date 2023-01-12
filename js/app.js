@@ -19,7 +19,7 @@ let conteudo = document.getElementById('conteudo')
 // Função abri modal
 function abriModal () {
     modal.style.display = 'block'
-    window.location.reload(true);
+    window.location.reload();
 }
 
 // Função fecha modal 
