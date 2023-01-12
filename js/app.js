@@ -49,7 +49,7 @@ window.addEventListener('click', (event) =>{
 })
 
 const getTarefas = async () =>{
-    let bancoDeDados = await fetch ('http://localhost:3000/tarefas')
+    let bancoDeDados = await fetch ('https://gerenciador.herokuapp.com/tarefas')
     let tarefas = await bancoDeDados.json() 
     const content = document.getElementById("conteudo")
     tarefas.forEach((tarefas) => {
@@ -80,7 +80,7 @@ const getTarefas = async () =>{
 }
 
 let adicionarTarefas = async (tarefa) =>{
-    await fetch("http://localhost:3000/tarefas",{
+    await fetch("https://gerenciador.herokuapp.com/tarefas",{
         method:"POST",
         headers:{
             'Accept':'application/json, text/plain, */*',
@@ -100,14 +100,14 @@ function verificarFormulario(){
 }
 
 const getTarefaUnica = async(id) =>{
-    let bancoDeDados = await fetch(`http://localhost:3000/tarefas/${id}`)
+    let bancoDeDados = await fetch(`https://gerenciador.herokuapp.com/tarefas/${id}`)
     let tarefas = await bancoDeDados.json() 
     return tarefas
 } 
 
 let obterTarefa = async (id, tarefa) =>{
     console.log('PUT')
-    await fetch(`http://localhost:3000/tarefas/${id}`,{
+    await fetch(`https://gerenciador.herokuapp.com/tarefas/${id}`,{
         method:"PUT",
         headers:{
             'Accept':'application/json, text/plain, */*',
@@ -155,7 +155,7 @@ function alterarData(data){
 
 //função para deletar a tarefa cadastrada no banco de dados
 const deletarTarefa = async (id) =>{
-    await fetch(`http://localhost:3000/tarefas/${id}`,{
+    await fetch(`https://gerenciador.herokuapp.com/tarefas/${id}`,{
         method:"DELETE",
     })
     getTarefas()
