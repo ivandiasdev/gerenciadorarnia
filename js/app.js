@@ -64,7 +64,7 @@ const getTarefas = async () =>{
                 classeCor = 'colorPausado'
             }
         const dataTarefa = alterarData(tarefas.mData)
-        
+    content.innerHTML = ()
     content.innerHTML = content.innerHTML + `
     <tr>
     <td scope="row" class="corTexto1 col-1">${tarefas.mNumero}</td>
