@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+  }  
+  body{
+    width: 100%;
+    min-height: 100vh;
+  }
+.buttonForm{
+  background: none;
+  border: none;
+  padding: 5px;
+}
+.barEsq {
+    position: fixed;
+    width: 51px;
+    height: 823px;
+    min-height: 100%;
+    left: 0px;
+    top: 0px;
+    background: #68519D;
+}
+.barEsq2{ 
+    display: flex;
+    width: 60px;
+    height: 823px;
+    min-height: 100%;
+    left: 9px;
+    top: 0px;
+    padding-top: none;
+    background: #D7CAE5;
+}
+.logo {
+    position: fixed;
+    width: 216px;
+   height: 64px;
+    left: 133px;
+    top: 86px;
+}
+.titulo{
+    padding-top: 35%;
+    padding-left: 15%;
+    width: 500px;
+    height: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 30px;
+    color: #68519D;
+}
+.check {
+    position: absolute;
+    padding-top: 56%;
+    padding-left: 10%;
+    right: 88.44%;
+    top: 26.73%;
+    bottom: 70.35%;
+}
+.button1 {
+    box-sizing: border-box;
+    position: fixed;
+    left: 133px;
+    top: 265px;
+    border: 1px solid #68519D;
+    border-radius: 20px;
+    font-family: 'Poppins';
+    cursor: pointer;
+  }
+.button1:hover{
+    background-color: #68519D;
+    color: white;
+}
+.tabela{
+    position: fixed;
+    width: 1000px;
+    height: 300px;
+    left: 133px;
+    top: 350px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    overflow: auto;
+}
+.cor{
+    color: #2C2661;
+}
+.button1 {
+    border: 1px solid #68519D;
+    background: white;
+    padding: 10px;
+    font-size: 17px;
+  }
+  .polygon{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-height: 500px;
+    height: 75%;
+    width: 20%;
+    background-color: #F8B04E;
+    clip-path: polygon(0 100%, 0 45%, 45% 0, 100% 0);
+    transform: rotate(180deg);
+  }
+  table {
+    width: 950px;
+    word-break: break-all;
+    border-collapse: collapse;
+    overflow: visible;
+  }
+  
+  thead {
+    background-color: white;
+    color: #2C2661;
+  }
+  
+  tbody tr td {
+    vertical-align: text-top;
+    padding: 6px;
+  }
+  
+  thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  
+  tbody tr {
+    margin-bottom: 50px;
+  }
+  
+  thead tr th.acao {
+    width: 100px!important;
+    text-align: center;
+  }
+  
+  tbody tr td.acao {
+    text-align: center;
+  }
+
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  background: rgba(51, 51, 51, 0.7);
+}
+.card1{
+  width: 661px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 48px 43px;
+  margin: 5% auto;
+}
+.TituloCard{
+  width: 500px;
+  height: 30px;
+  left: 438px;
+  top: 177px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  color: #68519D;
+}
+.tamanhoDosFormularios{
+  width: 30%;
+  height: 21px;
+  left: 444px;
+  top: 235px;
+  padding-top: 5%;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #68519D;
+  padding-bottom: 5px;
+}
+#mNumero{
+  width: 555px;
+  height: 50px;
+  left: 443px;
+  top: 262px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-bottom: 31px;
+}
+#mDescricao{
+  box-sizing: border-box;
+  width: 555px;
+  height: 50px;
+  left: 443px;
+  top: 262px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  }
+#mData{
+  box-sizing: border-box;
+  width: 222px;
+  height: 50px;
+  left: 443px;
+  top: 457px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  text-align: center;
+}
+#mStatus{
+  box-sizing: border-box;
+  width: 222px;
+  height: 50px;
+  left: 443px;
+  top: 555px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  text-align: center;
+}
+#buttonClose{
+  background-color: none;
+  width: 65px;
+  height: 21px;
+  left: 438px;
+  top: 662px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+}
+#buttonSalvar{
+  box-sizing: border-box;
+  width: 121px;
+  height: 36px;
+  border: 1px solid #68519D;
+  border-radius: 20px;
+}
+.buttonSalvarAtivado{
+  background-color: #68519D;
+  color: white;
+}
+
+.button5{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button5{
+  background: none;
+  border: none;
+}
+
+.corTexto1{
+  text-align: left;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #2C2661;
+  padding: 5px;
+}
+tr:nth-child(even) {
+  background: #e8e7e7;
+}
+tr:nth-child(odd) {
+  background: white
+}
+
+.colorConcluido{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #27AE60;
+}
+
+.colorPausado{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #EB5757;
+}
+
+.colorEmAndamento{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #F8B04E;
+}
+.espacoTexto{
+  padding-left: 10px;
+}

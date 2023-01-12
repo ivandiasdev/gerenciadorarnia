@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas - Arnia</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous" defer
+  ></script>
+  <script defer src="https://kit.fontawesome.com/f04378cf91.js" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body onload="getTarefas()">
+    <div class="barEsq"></div>
+    <div class="polygon">&nbsp;</div>
+    <div class="barEsq2"></div>
+    <div class="teste1000"></div>
+    <div class="logo">
+        <img src="./img/logo.png" alt="logo">
+        <img class="check" src="./img/check.svg" alt="logo">
+        <div class="titulo">Gerenciador de Tarefas</div>
+    </div>
+    <button class="button1" id="buttonAdd" onclick="abriModal()">+ Adicionar nova tarefa</button>
+      </div>
+      <div class="tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>Núm</th>
+                    <th>Descrição</th>
+                    <th>Data de entrega</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="conteudo">
+            </tbody>
+        </table>
+      </div>
+      <div class="modalContainer">
+        <div class="modal" id="modal">
+            <form class="card1" id="formularioAdd" method="post">
+              <div class="TituloCard" id="trocaTexto"></div>
+                <section>
+                <label  class="tamanhoDosFormularios" for="mNumero">Numero</label><br>
+                <input class="espacoTexto" onchange="verificarFormulario()" id="mNumero" name="mNumero" type="number" required>   
+                </section>
+                <section>
+                <label class="tamanhoDosFormularios" for="mDecricao">Descrição</label><br>
+                <input class="espacoTexto" onchange="verificarFormulario()" id="mDescricao" name="mDecricao" type="text" required>
+                </section>
+                <section>
+                <label class="tamanhoDosFormularios" for="mData">Data de Entrega</label><br>
+                <input class="espacoTexto" onchange="verificarFormulario()" id="mData" name="mData" type="date">
+                </section>
+                <section>
+                  <label class="tamanhoDosFormularios" for="status">Status</label><br>
+                  <select onchange="verificarFormulario()" name="mStatus" id="mStatus" required>
+                    <option value="Concluido">Concluído</option>
+                    <option value="Em Andamento">Em andamento</option>
+                    <option value="Pausado">Pausado</option>
+                  </select>
+                </section><br><br>
+
+                <div class="button5">
+                  <button type="button" id="buttonClose" onclick="closeModal()">Cancelar</button>
+                  <button id="buttonSalvar" disabled>Salvar</button>
+                </div>
+            </form>
+        </div>
+      </div>
+  <script src="js/app.js"></script> 
+</body>
+</html>
