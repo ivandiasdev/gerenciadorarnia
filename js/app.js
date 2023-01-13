@@ -108,7 +108,7 @@ const getTarefaUnica = async(id) =>{
     return tarefas
 } 
 
-//função obter a tarefa para fazer na edição da API
+//função para fazer o metodo PUT
 let obterTarefa = async (id, tarefa) =>{
     console.log('PUT')
     await fetch(`https://api-projeto-production.up.railway.app/tarefas/${id}`,{
