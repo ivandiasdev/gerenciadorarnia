@@ -101,12 +101,14 @@ function verificarFormulario(){
     }
 }
 
+// função de busca uma tarefa unica na api
 const getTarefaUnica = async(id) =>{
     let bancoDeDados = await fetch(`https://api-projeto-production.up.railway.app/tarefas/${id}`)
     let tarefas = await bancoDeDados.json() 
     return tarefas
 } 
 
+//função obter a tarefa para fazer na edição da API
 let obterTarefa = async (id, tarefa) =>{
     console.log('PUT')
     await fetch(`https://api-projeto-production.up.railway.app/tarefas/${id}`,{
