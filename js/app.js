@@ -26,7 +26,7 @@ function closeModal () {
     modal.style.display ='none'
 }
 
-// Evento de click quando tiver um click fora da janela do modal
+// função pra quando abri o modal vim sem valor algum
 buttonOpenModal.onclick = () => {
     document.getElementById("mNumero").value = ''
     document.getElementById("mDescricao").value = ''
@@ -41,13 +41,14 @@ function editarTitulo () {
     TituloCard.textContent = "Editar tarefa"
 }
 
-
+// Evento de click quando tiver um click fora da janela do modal
 window.addEventListener('click', (event) =>{
     if(event.target === modal){
         closeModal()
     }
 })
 
+// função serve para renderizar os campos na tela
 const getTarefas = async () =>{
     let bancoDeDados = await fetch ('https://api-projeto-production.up.railway.app/tarefas')
     let tarefas = await bancoDeDados.json() 
@@ -79,6 +80,7 @@ const getTarefas = async () =>{
     })
 }
 
+// função que adicionar tarefas a API
 let adicionarTarefas = async (tarefa) =>{
     await fetch("https://api-projeto-production.up.railway.app/tarefas",{
         method:"POST",
@@ -117,6 +119,7 @@ let obterTarefa = async (id, tarefa) =>{
     });
 }
 
+// função que serve para pegar os valores do inputs e transformando em objeto
 if(formulario) {
     formulario.addEventListener('submit',(event) => {
         event.preventDefault()
